@@ -10,7 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 settings = Settings()
 
-print(settings.database_password)
+
 
 # models.Base.metadata.create_all(bind=engine)
 

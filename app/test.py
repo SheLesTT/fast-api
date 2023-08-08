@@ -1,4 +1,4 @@
-a = {"tata": 5}
-b = a
-b["tata"] = 4
-print(a)
+sum = 0
+for i in range(1, 19):
+    sum += i**3 +15
+    print(sum)
