@@ -7,7 +7,7 @@ class UserCreate(BaseModel):
     password: str
 
     class Config:
-        orm_model = True
+        orm_mode = True
 
 class UserOut(BaseModel):
     id: int
@@ -16,7 +16,7 @@ class UserOut(BaseModel):
 
 
     class Config:
-        orm_model = True
+        orm_mode = True
 
 
 class UserLogin(BaseModel):
@@ -30,7 +30,7 @@ class PostBase(BaseModel):
 
 
     class Config:
-        orm_model = True
+        orm_mode = True
 
 
 class PostCreate(PostBase):
@@ -42,17 +42,17 @@ class Post(PostBase):
     created_at: datetime
     owner_id: int
     owner: UserOut
-    votes: int
+    votes: Optional[int]
 
     class Config:
-        orm_model = True
+        orm_mode = True
 
 class PostOut(BaseModel):
     Post: Post
     votes:int
 
     class Config:
-        orm_model = True
+        orm_mode = True
 
 class Token(BaseModel):
     access_token: str
