@@ -93,6 +93,5 @@ def change_post(id: int, post: schemas.PostCreate, db: Session = Depends(get_db)
     post_query.update(post.dict(), synchronize_session=False)
     db.commit()
 
-    post.owner
-    post.__dict__["owner"] = post.__dict__["owner"].__dict__
-    return post_query.first().__dict__
+
+    return new_post
