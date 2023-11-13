@@ -1,3 +1,3 @@
-from  test_file import  foo
+from  app.test_file import  foo
 
 foo()
