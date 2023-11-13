@@ -8,8 +8,10 @@ on:
 
 jobs:
   job1:
+    environment:
+      name: testing
     env:
-      DATABASE_HOSTNAME: localhost
+      DATABASE_HOSTNAME: ${{secrets.DATABASE_HOSTNAME}}
       DATABASE_PORT: 5432
       DATABASE_PASSWORD: F_7d3fd73
       DATABASE_NAME: fast_api
@@ -30,7 +32,9 @@ jobs:
       - name: install all dependencies
         run: pip install -r requirements.txt
       - name: do ls
-        run: ls
+        run: |
+          cd app
+          ls
       - name: setup pytest
         run: |
           pip install pytest
