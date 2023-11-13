@@ -30,7 +30,8 @@ jobs:
       - name: update pip
         run: python -m pip install --upgrade pip
       - name: check
-        run: python3 active_test.py
+        run: python tests\active_test.py
+
 #      - name: install all dependencies
 #        run: pip install -r requirements.txt
 #      - name: do ls
